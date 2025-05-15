@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary-font:"Open Sans", sans-serif;
+    --secondary-font:"Dancing Script", cursive;
+    --primary-color:#cf1d16;
+    --primary-color-light:#d33e34;
+    --white-light:#f8f9fa;
+    --white:#fff;
+    --white-lighter:#f7f7f7;
+    --grey:#d8dbdd;
+    --grey-dark:#797877;
+    --black-main:#000000;
+    --black-light:#262626;
+}
+
+/* 1rem = 10px */
+html {
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    font-family: var(--primary-font);
+}
