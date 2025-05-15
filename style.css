@@ -10,7 +10,7 @@
   --primary-color: #cf1d16;
   --primary-color-light: #d33e34;
   --white-light: #f8f9fa;
-  --white: #fff;
+  --white: #ffffff;
   --white-lighter: #f7f7f7;
   --grey: #d8dbdd;
   --grey-dark: #797877;
@@ -25,6 +25,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: var(--primary-font);
+  width: 95%;
+  margin: 0 auto;
 }
 .header-logo {
   display: flex;
@@ -59,5 +61,73 @@ body {
 .header-contact-item p {
   color: var(--grey-dark);
   font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.header-logo-link-wrapper {
+  text-decoration: none;
+  color: var(--black-main);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu-toggle-button {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .header-nav-list {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-nav-list {
+    flex-direction: column;
+  }
+  .header-nav {
+    right: 0;
+    top: 100%;
+    /* transform: translateX(500px); */
+    display: none;
+    background-color: green;
+  }
+
+  .menu-toggle-button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+.header-nav-list li {
+  list-style: none;
+}
+.header-nav-list li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--black-main);
+  font-weight: 600;
+}
+.header-cta {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+.header-cta a {
+  color: white !important;
   font-weight: 600;
 }
