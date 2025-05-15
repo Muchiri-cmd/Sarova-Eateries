@@ -29,6 +29,49 @@ body {
   margin: 0 auto;
 }
 
+/* Reusable components */
+.title {
+  position: relative;
+}
+
+.title-main {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 900;
+  z-index: 3;
+  position: relative;
+  /* z-index:2;
+  position:relative; */
+}
+
+.title-back-text {
+  text-transform: capitalize;
+  color: var(--primary-color-light);
+  font-family: var(--secondary-font);
+  font-size: 8rem;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -4rem;
+  z-index: 2;
+  /* display: block;
+  text-align: center;
+  transform:translateY(6rem);
+  z-index:1;
+  position:relative; */
+}
+@media screen and (max-width: 35.25em) {
+  .title-main {
+    font-size: 3.5rem;
+  }
+  .title-back-text {
+    font-size: 5rem;
+  }
+}
+/* End of reusable */
+
 /* --------------------------------------------Header --------------------------------------*/
 .header-logo {
   display: flex;
@@ -240,7 +283,7 @@ body {
   gap: 2rem;
   justify-content: center;
   background-color: var(--white-light);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 .meal-category-item {
   /* margin:10rem; */
@@ -267,5 +310,10 @@ body {
   font-weight: 500;
   line-height: 2;
 }
-
 /* End of meal categories */
+
+/* Special meals section */
+.special-dishes-section {
+  padding: 10rem 5rem;
+}
+/* End of secial meals section */
