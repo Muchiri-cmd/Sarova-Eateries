@@ -28,6 +28,10 @@ body {
   width: 95%;
   margin: 0 auto;
 }
+a {
+  text-decoration: none;
+  color: var(--black-main);
+}
 
 /* Reusable components */
 .title {
@@ -324,8 +328,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* End of secial meals section */
-
 .special-dish-card {
   --special-dish-card-length: 35rem;
   width: var(--special-dish-card-length);
@@ -338,7 +340,6 @@ body {
 .special-dish-card:hover img {
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 25em) {
@@ -392,3 +393,179 @@ body {
   text-align: center;
   font-size: 2.4rem;
 }
+
+/* End of secial meals section */
+
+/* Menu stylings */
+.menu-section {
+  background-color: var(--white-light);
+  padding: 10rem 5rem;
+}
+
+.menu-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.menu-card {
+  width: 45%;
+  padding: 1.5rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+/* 800px /16  */
+@media screen and (max-width: 50em) {
+  .menu-cards-container {
+    flex-direction: column;
+  }
+  .menu-card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 31.25em) {
+  .menu-section {
+    padding-inline: 2rem;
+  }
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-title {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.menu-price {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--primary-color-light);
+}
+
+.menu-description {
+  font-size: 1.4rem;
+  color: var(--grey-dark);
+  line-height: 2;
+}
+
+/* End of menu stylings */
+
+/* Chef section */
+.chefs-section{
+  margin-block:10rem;
+}
+.chefs-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.chef-card {
+  width: 20rem;
+  margin:2rem;
+}
+
+.chef-card-img-wrapper {
+  height: 30rem;
+  margin-bottom: 1.5rem;
+}
+
+.chef-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.chef-name {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--black-light);
+}
+
+.chef-position {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: var(--grey-dark);
+}
+
+.chef-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.chef-social-link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--primary-color-light);
+}
+
+/* End of chef section */
+
+/* Newsletter */
+.newsletter-section {
+  background: var(--white-lighter);
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-section-title {
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.newsletter-text {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--grey-dark);
+  margin-bottom: 1rem;
+}
+
+.newsletter-submit-btn {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  border: 2px solid var(--primary-color);
+}
+
+.newsletter-text-input {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.newsletter-text-input:focus {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.newsletter-text-input::placeholder {
+  color: var(--grey-dark);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* TODO: Media queries for newsletter */
+
+/* End of newsletter styles */
