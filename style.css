@@ -16,6 +16,12 @@
   --grey-dark: #797877;
   --black-main: #000000;
   --black-light: #262626;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 /* 1rem = 10px */
@@ -75,6 +81,23 @@ a {
   }
 }
 /* End of reusable */
+
+.scroll-to-top {
+  --scroll-to-top-length: 6rem;
+  width: var(--scroll-to-top-length);
+  height: var(--scroll-to-top-length);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 4rem;
+  color: white;
+  position: fixed;
+  bottom: 3rem;
+  z-index: 999;
+  right: 1rem;
+}
 
 /* --------------------------------------------Header --------------------------------------*/
 .header-logo {
@@ -458,8 +481,8 @@ a {
 /* End of menu stylings */
 
 /* Chef section */
-.chefs-section{
-  margin-block:10rem;
+.chefs-section {
+  margin-block: 10rem;
 }
 .chefs-container {
   display: flex;
@@ -471,7 +494,7 @@ a {
 
 .chef-card {
   width: 20rem;
-  margin:2rem;
+  margin: 2rem;
 }
 
 .chef-card-img-wrapper {
@@ -569,3 +592,70 @@ a {
 /* TODO: Media queries for newsletter */
 
 /* End of newsletter styles */
+
+/* Footer */
+.footer {
+  background-color: var(--black-light);
+  padding: 10rem 5rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.footer-col {
+  width: 33%;
+  padding:1rem;
+}
+
+.footer-title {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
+.footer-text {
+  color: var(--white-light);
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.opening-hour {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opening-hour span {
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.footer-nav-list {
+  list-style: none;
+}
+
+/* .footer-nav-item{
+
+} */
+
+@media screen and (max-width: 53.125em) {
+  .footer-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .footer-col {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--white-light);
+  font-size: 1.4rem;
+  margin-top: 5rem;
+}
+/* End of footer */
